@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "Tênis Nike",
+    "price": 300.0,
+    "imageUrl": "https://images.lojanike.com.br/1024x1024/produto/237945_2171223_20200515160732.png"
+  },
+  {
+    "id": "2",
+    "title": "Tênis Nike Quest",
+    "price": 300.0,
+    "imageUrl": "https://static.netshoes.com.br/produtos/tenis-nike-quest-2-masculino/26/HZM-1743-026/HZM-1743-026_zoom1.jpg?ts=1562156633&ims=544x"
+  },
+  {
+    "id": "3",
+    "title": "Tênis Nike React City GPX Masculino",
+    "price": 300.0,
+    "imageUrl": "https://images.lojanike.com.br/1024x1024/produto/182427_1741308_20191008181525.png"
+  },
+  {
+    "id": "4",
+    "title": "Tênis Nike Air Vapormax Flyknit 3 Masculino",
+    "price": 759.99,
+    "imageUrl": "https://images.lojanike.com.br/1024x1024/produto/19979_313937_20190606113449.png"
+  },
+  {
+    "id": "5",
+    "title": "Fone De Ouvido Xiaomi Redmi AirDots",
+    "price": 159.00,
+    "imageUrl": "https://img.olx.com.br/images/17/172909033323812.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Keychron K2",
+    "price": 510.00,
+    "imageUrl": "https://i.pinimg.com/originals/1e/f0/5d/1ef05dc93bce8ebadd35c6f3ec4f0613.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Webcam Logitech C920 HD PRO",
+    "price": 1099.95,
+    "imageUrl": "https://kupi.cn.ua/upload/shop/pos/114642/3b-veb-kamera-logitech-webcam-c920-hd-pro-960-001055.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Monitor UltraWide™ LG 29'' 21:9 Full HD IPS",
+    "price": 1580.00,
+    "imageUrl": "https://www.lg.com/br/images/monitores/md05758707/gallery/25UM58_Product-image_01_mobile_1.jpg"
+  }
+]
