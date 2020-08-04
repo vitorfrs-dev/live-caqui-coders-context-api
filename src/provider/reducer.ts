@@ -9,14 +9,14 @@ export const INIT_STATE = {
   basket: []
 }
 
-export const Types = {
-  GET_USER: 'GET_USER',
-  REHYDRATE: 'REHYDRATE',
-  LOGOUT: 'LOGOUT',
-  ADD_NEW_PRODUCT: "ADD_NEW_PRODUCT",
-  REMOVE_PRODUCT: "REMOVE_PRODUCT",
-  INCR_PRODUCT_QTY: "INCR_PRODUCT_QTY",
-  DECR_PRODUCT_QTY: "DECR_PRODUCT_QTY",
+export enum Types {
+  GET_USER = 'GET_USER',
+  REHYDRATE = 'REHYDRATE',
+  LOGOUT = 'LOGOUT',
+  ADD_NEW_PRODUCT = "ADD_NEW_PRODUCT",
+  REMOVE_PRODUCT = "REMOVE_PRODUCT",
+  INCR_PRODUCT_QTY = "INCR_PRODUCT_QTY",
+  DECR_PRODUCT_QTY = "DECR_PRODUCT_QTY",
 }
 
 export const reducer = (state: IState, action: IAction) => {
@@ -43,6 +43,11 @@ export const reducer = (state: IState, action: IAction) => {
         return { ...state, basket: newBasket }
       }
       return { ...state, basket: [...state.basket, action.payload] }
+    }
+
+    case Types.REMOVE_PRODUCT: {
+      const newBasket = state.basket.filter(p => p.id !== action.payload);
+      return { ...state, basket: newBasket }
     }
 
     case Types.INCR_PRODUCT_QTY: {

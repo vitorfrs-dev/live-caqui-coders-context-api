@@ -34,10 +34,6 @@ const AppProvider: FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   useEffect(() => {
-    console.log(state);
-  }, [state]);
-
-  useEffect(() => {
     const persisted = localStorage.getItem('persistContext');
 
     if (persisted) {

@@ -7,12 +7,18 @@ import {
   ProductTable,
   Quantity,
   TotalArea,
-  EmptyCart
+  EmptyCart,
+  DeleteBtn
 } from './styles';
-import { incrementProduct, decrementProduct } from '../../provider/actions';
 
+import {
+  incrementProduct,
+  decrementProduct,
+  removeProduct
+} from '../../provider/actions';
 
 import emptyCartIcon from '../../assets/empty-cart.png';
+import { MdDelete } from 'react-icons/md';
 
 const ShoppingCart: FC = () => {
 
@@ -26,6 +32,10 @@ const ShoppingCart: FC = () => {
 
   const remove = (id: string) => {
     dispatch(decrementProduct(id));
+  }
+
+  const removeAll = (id: string) => {
+    dispatch(removeProduct(id));
   }
 
   const calcPrice = (): number => {
@@ -55,6 +65,7 @@ const ShoppingCart: FC = () => {
                 <th>Preço</th>
                 <th>Quantidade</th>
                 <th>Total</th>
+                <th />
               </thead>
               <tbody>
                 {basket.map(item => (
@@ -72,9 +83,15 @@ const ShoppingCart: FC = () => {
                       </Quantity>
                     </td>
                     <td>{Number(item.quantity * item.price).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>
+                      <DeleteBtn
+                        onClick={() => removeAll(item.id)}
+                      >
+                        <MdDelete size={22} />
+                      </DeleteBtn>
+                    </td>
                   </tr>
                 ))}
-
               </tbody>
             </ProductTable>
           </main>

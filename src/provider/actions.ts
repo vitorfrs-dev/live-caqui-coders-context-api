@@ -21,6 +21,11 @@ export const addToBasket = (product: IBasketItem) => ({
   payload: product
 });
 
+export const removeProduct = (id: string) => ({
+  type: Types.REMOVE_PRODUCT,
+  payload: id
+});
+
 export const incrementProduct = (id: string) => ({
   type: Types.INCR_PRODUCT_QTY,
   payload: id

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../styles/colors';
 
 export const Container = styled.div`
   width: 1172px;
@@ -9,6 +10,8 @@ export const Container = styled.div`
     width: 70%;
     background: #fff;
     border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   aside {
@@ -21,13 +24,27 @@ export const Container = styled.div`
 
 export const ProductTable = styled.table`
   width: 100%;
+  border-collapse: collapse;
+
   th {
     font-weight: 700;
     text-align: left;
     padding: 20px 0;
     box-sizing: border-box;
   }
-  
+
+  tr:first-child {
+    border-top: 0;
+  }
+
+  tr {
+    border-top: 1px solid #ddd;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+
   td img {
     width: 100px;
   }
@@ -54,6 +71,23 @@ export const Quantity = styled.div`
     align-items: center;
     justify-content: center;
     border: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+`;
+
+export const DeleteBtn = styled.button`
+  background: transparent;
+  border: 0;
+  color: #777;
+  padding: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: ${colors.primary};
+    cursor: pointer;
   }
 `;
 
