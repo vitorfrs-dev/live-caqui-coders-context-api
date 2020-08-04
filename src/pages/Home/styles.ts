@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const GridArea = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr ;
-  grid-gap: 16px;
+  grid-gap: 10px;
 
   @media only screen and (min-width: 650px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -25,6 +25,7 @@ export const GridArea = styled.div`
 
   @media only screen and (min-width: 900px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
   }
 `
 

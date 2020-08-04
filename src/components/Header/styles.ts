@@ -108,12 +108,16 @@ export const Divider = styled.div`
   height: 50px;
 `
 export const BtnSignIn = styled.button`
-  color: #444;
+  color: ${colors.primary};
   background: #fff;
   border: 0;
   border-radius: 4px;
   padding: 10px 15px;
- `;
+  
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 export const UserArea = styled.div`
   display: flex;
