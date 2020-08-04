@@ -14,7 +14,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     max-width: 1172px;
-    box-sizing: border-border-box;
+    box-sizing: border-box;
     padding: 0 15px;
     display: flex;
     justify-content: space-between;

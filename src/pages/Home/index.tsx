@@ -9,7 +9,7 @@ import IProduct from '../../models/product';
 import { addToBasket } from '../../provider/actions';
 import { AppContext } from '../../provider/AppProvider';
 
-const Homepage: FC = () => {
+const Home: FC = () => {
 
   const [products, setProducts] = useState<IProduct[]>([]);
 
@@ -51,4 +51,4 @@ const Homepage: FC = () => {
   )
 }
 
-export default Homepage;
+export default Home;
