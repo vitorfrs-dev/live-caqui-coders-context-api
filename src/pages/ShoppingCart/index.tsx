@@ -19,6 +19,7 @@ import {
 
 import emptyCartIcon from '../../assets/empty-cart.png';
 import { MdDelete } from 'react-icons/md';
+import formatCurrency from '../../utils/formatCurrency';
 
 const ShoppingCart: FC = () => {
 
@@ -74,7 +75,7 @@ const ShoppingCart: FC = () => {
                       <img src={item.imageUrl} alt="" />
                     </td>
                     <td>{item.title}</td>
-                    <td>{item.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>{formatCurrency(item.price)}</td>
                     <td>
                       <Quantity>
                         <button onClick={() => remove(item.id)}>-</button>
@@ -82,7 +83,7 @@ const ShoppingCart: FC = () => {
                         <button onClick={() => add(item.id)}>+</button>
                       </Quantity>
                     </td>
-                    <td>{Number(item.quantity * item.price).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>{formatCurrency(item.quantity * item.price)}</td>
                     <td>
                       <DeleteBtn
                         onClick={() => removeAll(item.id)}
@@ -99,7 +100,7 @@ const ShoppingCart: FC = () => {
           <aside>
             <TotalArea>
               <h3>Total</h3>
-              <span>{calcPrice().toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</span>
+              <span>{formatCurrency(calcPrice())}</span>
             </TotalArea>
           </aside>
         </>
