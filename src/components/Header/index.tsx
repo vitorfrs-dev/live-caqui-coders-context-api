@@ -35,11 +35,11 @@ const Header: FC = () => {
         </Logo>
         <aside>
           <Link to='/shoppingcart'>
-            <BasketArea>
+            <BasketArea data-cy="basket-area">
               <FaShoppingBasket size={25} />
               {basket.length > 0 && (
                 <>
-                  <BasketCounter>{basket.length}</BasketCounter>
+                  <BasketCounter data-cy="basket-counter">{basket.length}</BasketCounter>
                   <div className="basket-drop-down">
                     {basket.map(item => (
                       <BasketItem key={item.id}>
@@ -59,7 +59,7 @@ const Header: FC = () => {
           <Divider />
 
           {!signed && (
-            <BtnSignIn onClick={() => setOpen(true)}>Entrar</BtnSignIn>
+            <BtnSignIn data-cy="signInButton" onClick={() => setOpen(true)}>Entrar</BtnSignIn>
           )}
 
           {signed && (

@@ -68,7 +68,7 @@ const ShoppingCart: FC = () => {
                 <th>Total</th>
                 <th />
               </thead>
-              <tbody>
+              <tbody data-cy="cart-table-body">
                 {basket.map(item => (
                   <tr key={item.id}>
                     <td>

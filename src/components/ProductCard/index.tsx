@@ -14,7 +14,12 @@ const ProductCard = ({ id, title, price, imageUrl, addToBasket }: IProductCard) 
       <img src={imageUrl} alt={title} />
       <Title>{title}</Title>
       <Price>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</Price>
-      <Button onClick={() => addToBasket(id)}>Add ao carrinho</Button>
+      <Button 
+        onClick={() => addToBasket(id)}
+        data-cy='add-to-cart-btn'
+      >
+        Add ao carrinho
+      </Button>
     </Container>
   )
 }

@@ -47,20 +47,20 @@ const AuthAside = ({ open, onClose }: IAuthAside) => {
   return (
     <Container open={open}>
       <Header>
-        <button onClick={onClose}>
+        <button onClick={onClose} data-cy="close-auth-aside-btn">
           <MdArrowForward size={20} />
         </button>
       </Header>
       <Main>
         {!signed && (
-          <form onSubmit={onSubmitForm}>
+          <form onSubmit={onSubmitForm} data-cy="sign-in-form">
             <input
               placeholder="Type your github user"
               name="githubUser"
               onChange={onChangeInput}
               value={input}
             />
-            <button>Entrar</button>
+            <button data-cy="submit-sign-in">Entrar</button>
           </form>
         )}
 
@@ -68,7 +68,12 @@ const AuthAside = ({ open, onClose }: IAuthAside) => {
           <UserInfo>
             <img src={user.avatarUrl} alt="user avatar" />
             <strong>{user.name}</strong>
-            <button onClick={() => dispatch(signOut())}>Sair</button>
+            <button 
+              onClick={() => dispatch(signOut())}
+              data-cy="sign-out-btn"
+            >
+              Sair
+            </button>
           </UserInfo>
         )}
 
